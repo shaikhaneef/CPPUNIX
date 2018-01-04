@@ -1,0 +1,105 @@
+1)
+
+
+#include <stdio.h>
+void main()
+{     
+    int i;
+	printf("The first 10 natural number is:\n");
+	for (i=1;i<=10;i++)
+	{      
+		printf("%d ",i);
+	}
+        printf("\n");
+}
+--------------------------------------------------------------
+
+
+2)sum of first 10 natural numbers.
+
+#include <stdio.h>
+void main()
+{
+    int  j, sum = 0;
+
+    printf("The first 10 natural number is :\n");
+ 
+    for (j = 1; j <= 10; j++)
+    {
+        sum = sum + j;
+        printf("%d ",j);    
+    }
+    printf("\nThe Sum is : %d\n", sum);
+}
+------------------------------------------------------
+
+3)
+
+#include <stdio.h>
+void main()
+{       
+    int i,n,sum=0;
+	float avg;
+	printf("Input the 10 numbers : \n");
+	for (i=1;i<=10;i++)
+	{
+                printf("Number-%d :",i);
+
+		scanf("%d",&n);
+		sum +=n;
+	}
+	avg=sum/10.0;
+	printf("The sum of 10 no is : %d\nThe Average is : %f\n",sum,avg);
+ 
+}
+---------------------------------------------------------------------------
+
+4)
+
+#include <stdio.h>
+void main()
+ {
+    int i,ctr;
+    printf("Input number of terms : ");
+    scanf("%d", &ctr);
+    for(i=1;i<=ctr;i++)
+    {
+	 printf("Number is : %d and cube of the %d is :%d \n",i,i, (i*i*i));     
+    }
+ }
+---------------------------------------------------------------------------------------
+
+5) Write a program in C to make such a pattern like right angle triangle with a number which will repeat a number in a row. 
+
+
+#include <stdio.h>
+void main()
+{
+   int i,j,rows;
+
+   printf("Input number of rows : ");
+   scanf("%d",&rows);
+   for(i=1;i<=rows;i++)
+   {
+	for(j=1;j<=i;j++)
+	   printf("%d",i);
+	printf("\n");
+   }
+}
+-------------------------------------------------------------
+
+6)
+
+
+
+
+
+
+
+
+
+
+
+
+
+

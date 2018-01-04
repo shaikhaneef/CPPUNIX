@@ -1,0 +1,134 @@
+1)Write a C program to accept two integers and check whether they are equal or not. 
+
+
+#include <stdio.h>
+void main()
+{
+    int int1, int2;
+ 
+    printf("Input the values for Number1 and Number2 : ");
+    scanf("%d %d", &int1, &int2);
+    if (int1 == int2)
+        printf("Number1 and Number2 are equal\n");
+    else
+        printf("Number1 and Number2 are not equal\n");
+}
+-----------------------------------------------------------------
+
+2)Write a C program to check whether a given number is positive or negative.
+
+
+#include <stdio.h>
+void main()
+{
+    int num;
+ 
+    printf("Input a number :");
+    scanf("%d", &num);
+    if (num >= 0)
+        printf("%d is a positive number \n", num);
+    else
+        printf("%d is a negative number \n", num);
+}
+---------------------------------------------------------------------
+
+3)Write a C program to check whether a triangle is Equilateral, Isosceles or Scalene.
+
+#include <stdio.h>
+int main()  
+{  
+    int sidea, sideb, sidec; //are three sides of a triangle  
+  
+    /* 
+     * Reads all sides of a triangle 
+     */  
+    printf("Input three sides of triangle: ");  
+    scanf("%d %d %d", &sidea, &sideb, &sidec);  
+  
+    if(sidea==sideb && sideb==sidec) //check whether all sides are equal  
+    {  
+        printf("This is an equilateral triangle.\n");  
+    }  
+    else if(sidea==sideb || sidea==sidec || sideb==sidec) //check whether two sides are equal  
+    {  
+        printf("This is an isosceles triangle.\n");  
+    }  
+    else //check whether no sides are equal  
+    {  
+        printf("This is a scalene triangle.\n");  
+    }  
+  
+    return 0;  
+} 
+----------------------------------------------------------------------------------
+
+4)Write a C program to check whether a character is an alphabet, digit or special character.
+
+#include <stdio.h>
+void main()  
+{  
+    char sing_ch;  
+
+    printf("Input a character: ");  
+    scanf("%c", &sing_ch);  
+  
+    /* Checks whether it is an alphabet */  
+    if((sing_ch>="a" && sing_ch<="z") || (sing_ch>="A" && sing_ch<="Z"))  
+    {  
+        printf("This is an alphabet.\n");  
+    }  
+    else if(sing_ch>="0" && sing_ch<="9") /* whether it is digit */  
+    {  
+        printf("This is a digit.\n");  
+    }  
+    else /* Else special character */  
+    {  
+        printf("This is a special character.\n");  
+    }  
+}
+---------------------------------------------------
+
+5)
+
+#include <stdio.h>
+#include <string.h>  
+void main()
+{  
+   int custid, conu;
+   float chg, surchg=0, gramt,netamt;
+   char connm[25];
+
+   printf("Input Customer ID :");
+   scanf("%d",&custid);
+   printf("Input the name of the customer :");
+   scanf("%s",connm);
+   printf("Input the unit consumed by the customer : ");
+   scanf("%d",&conu);
+   if (conu <200 )
+	chg = 1.20;
+   else	if (conu>=200 && conu<400)
+		chg = 1.50;
+	else if (conu>=400 && conu<600)
+			chg = 1.80;
+		else
+			chg = 2.00;
+   gramt = conu*chg;
+   if (gramt>300)
+	surchg = gramt*15/100.0;
+   netamt = gramt+surchg;
+   if (netamt  < 100)
+	netamt =100;
+   printf("\nElectricity Bill\n");
+   printf("Customer IDNO                       :%d\n",custid);
+   printf("Customer Name                       :%s\n",connm);
+   printf("unit Consumed                       :%d\n",conu);
+   printf("Amount Charges @Rs. %4.2f  per unit :%8.2f\n",chg,gramt);
+   printf("Surchage Amount                     :%8.2f\n",surchg);
+   printf("Net Amount Paid By the Customer     :%8.2f\n",netamt);
+
+}  
+
+
+
+
+
