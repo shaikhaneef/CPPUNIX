@@ -1,0 +1,287 @@
+1) Write five statements to print the asterisk pattern:
+*****
+*****
+*****
+
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+int i,j;
+clrscr();
+for(i=1;i<=3;i++)
+{
+for(j=1;j<=5;j++)
+printf("*");
+printf("\n");
+}
+getch();
+}
+
+
+**********************************************************************************************
+
+2) Write C code that will display the calculator menu.
+The program will prompt the user to choose the operation choice (from 1 to 5). Then it asks the user to input two integer vales for the calculation. See the sample below. 
+  MENU 
+          1. Add 
+          2. Subtract 
+          3. Multiply 
+          4. Divide 
+          5. Modulus 
+Enter your choice: 1 
+Enter your two numbers: 12 15 
+Result: 27 
+  
+Continue? y 
+The program also asks the user to decide whether he/she wants to continue the operation. If he/she input ‘y’, the program will prompt the user to choose the operation gain. Instead, the program will terminate. 
+
+
+#include<stdio.h>
+#include<conio.h>
+void ask();
+void add(int, int);
+void sub(int, int);
+void mul(int, int);
+void calc();
+int a,b,c,ch;
+void main()
+{
+clrscr();
+calc();
+getch()																																																																																																																																;
+}
+
+void calc()
+{
+int k;
+ch=menu();
+if(ch!=4)
+{
+printf("Enter 2 numbers \n");
+scanf("%d %d",&a,&b);
+switch(ch)
+{
+case 1: add(a,b);
+break;
+case 2: sub(a,b);
+break;
+case 3: mul(a,b);
+break;
+default:exit(0);
+}
+printf("\nDo u want to continue 1.Yes 2.No\n");
+scanf("%d",&k);
+if(k==1)
+calc();
+else
+exit(0);
+}
+else
+exit(0);
+}
+
+int menu()
+{
+int z;
+printf("Enter your choice\n1.Add\n2.Subtract\n3.Multiply\n4.Exit\n");
+scanf("%d",&z);
+return z;
+}
+
+void add(int a, int b)
+{
+int c=a+b;
+printf("Addition is %d ",c);
+}
+
+void sub(int a, int b)
+{
+int c=a-b;
+printf("Subtraction is %d ",c);
+}
+
+void mul(int a, int b)
+{
+int c=a*b;
+printf("Multiplication is %d ",c);
+}
+
+**********************************************************************************************
+
+
+3) Write a program that will ask the user to input three integer values from the keyboard. Then it will print the smallest and largest of those numbers.
+
+
+
+#include <stdio.h>
+
+int main() {
+  int x, y, z, sum, average, product;
+
+  printf( "Input three different integers: ");
+  scanf( "%d%d%d", &x, &y, &z );
+
+  sum = x + y + z;
+  printf("Sum is %d\n", sum );
+
+  average = (x + y + z ) / 3;
+  printf("Average is %d\n", average );
+
+  product = x * y * z;
+  printf("Product is %d\n", product );
+
+  if ( x < y ) {
+    if ( x < z ) {
+      printf("Smallest is %d\n", x );
+    }
+  }
+
+  if ( y < x ) {
+    if ( y < z ) {
+      printf("Smallest is %d\n", y );
+    }
+  }
+
+  if ( z < x ) {
+    if ( z < y ) {
+      printf("Smallest is %d\n", z );
+    }
+  }
+
+  if ( x > y ) {
+    if ( x > z ) {
+      printf("Largest is %d\n", x );
+    }
+  }
+
+  if ( y > x ) {
+    if ( y > z ) {
+      printf("Largest is %d\n", y );
+    }
+  }
+
+  if ( z > x ) {
+    if ( z > y ) {
+      printf("Largest is %d\n", z );
+    }
+  }
+  
+  return 0;
+}
+
+**********************************************************************************************
+
+
+4) Write a C program to check whether year is leap year or not using conditional operator.
+
+
+
+#include <stdio.h>
+
+int main()
+{
+    int year;
+ 
+  
+    printf("Enter any year: ");
+    scanf("%d", &year);
+
+   
+    (year%4==0 && year%100!=0) ? printf("LEAP YEAR") :
+        (year%400 ==0 ) ? printf("LEAP YEAR") : printf("COMMON YEAR");
+
+    return 0;
+}
+
+************************************************************************************************
+
+5) Write a C program to print all Armstrong numbers between 1 to n.
+
+
+
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    int num, lastDigit, digits, sum, i, end;
+
+    
+    printf("Enter upper limit: ");
+    scanf("%d", &end);
+
+    printf("Armstrong number between 1 to %d are: \n", end);
+
+    for(i=1; i<=end; i++)
+    {
+        sum = 0;
+
+      
+        num = i;
+
+        
+        digits = (int) log10(num) + 1;
+
+        
+        while(num > 0)
+        {
+            
+            lastDigit = num % 10;
+
+           
+            sum = sum + pow(lastDigit, digits);
+
+            
+            num = num / 10;
+        }
+
+      
+        if(i == sum)
+        {
+            printf("%d, ", i);
+        }
+
+    }
+
+    return 0;
+}
+
+************************************************************************************************
+
+6) Write a C program to print all ASCII character with their values.
+
+
+
+#include <stdio.h>
+
+int main()
+{
+    int i;
+
+    /* Print ASCII values from 0 to 255 */
+    for(i=0; i<=255; i++) 
+    {
+        printf("ASCII value of character %c = %d\n", i, i);
+    }
+
+    return 0;
+}
+
+*************************************************************************************************
+
+7) C program for ternary operator?
+
+
+
+#include <stdio.h>
+
+main()
+{
+   int a , b;
+
+   a = 10;
+   printf( "Value of b is %d\n", (a == 1) ? 20: 30 );
+
+   printf( "Value of b is %d\n", (a == 10) ? 20: 30 );
+}
